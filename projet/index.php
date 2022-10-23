@@ -6,7 +6,7 @@ $sql = 'SELECT * FROM produit';
 //On envoie la requête à la base de données et on stock les résultats dans $results
 $results = $bdd->query($sql);
 //On transforme les résultats en un tableau associatif compréhensible par PHP
-$personnes = $results->fetchAll(PDO::FETCH_OBJ);
+$produits = $results->fetchAll(PDO::FETCH_OBJ);
 //Déconnexion de la base de données
 unset($bdd);
 ?>
@@ -122,14 +122,23 @@ unset($bdd);
 
     </section>
 
-    <?php
+    <!-- <?php
+            $scandir = scandir("./img/AirPods2");
 
-    ?>
+            // voir les arrays 
+            // var_dump($scandir);
+            // var_dump($produits);
+
+            foreach ($scandir as $fichier) {
+                // foreach (array(0, 1, 2, 3, 4, 5) as $boucle) {
+                echo "<img src='" . $produits[0]->Chemin . "/" . $fichier . "' alt=''><br/>";
+                // }
+            }
+            ?> -->
 </body>
 <script src="app.js"></script>
 
 
-<?php '<img src="__DIR__ . "\img\AirPods2\MV7N2_AV1.jpg" alt="">' ?>
 
 
 </html>
