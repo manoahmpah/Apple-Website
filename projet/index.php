@@ -34,6 +34,8 @@ unset($bdd);
 </head>
 
 <body>
+
+    <!-- la partie navbar -->
     <header id="header">
 
         <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
@@ -84,7 +86,7 @@ unset($bdd);
         </ul>
     </nav> -->
 
-
+    <!-- la premiere section -->
     <section id="fisrt_page">
         <div id="container">
             <div>
@@ -105,6 +107,8 @@ unset($bdd);
 
 
             </div>
+
+            <!-- le popup pour la video -->
             <div id="popup" class="overlay">
                 <div class="popup">
                     <div>
@@ -139,9 +143,12 @@ unset($bdd);
             }
             ?> -->
 
+
+    <!-- deuxieme section -->
     <section class="iphone14_frontpage">
         <a href="">
 
+            <!-- on va chercher les nom des produits dans la base de données -->
             <h2 id="nomiphone14">
                 <?php echo $produits[5]->nom_produit ?>
             </h2>
