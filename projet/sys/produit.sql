@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Client :  localhost
--- Généré le :  Jeu 20 Octobre 2022 à 10:26
+-- Généré le :  Dim 23 Octobre 2022 à 07:08
 -- Version du serveur :  5.6.20-log
 -- Version de PHP :  5.4.31
 
@@ -19,47 +19,6 @@ SET time_zone = "+00:00";
 --
 -- Base de données :  `apple`
 --
-
--- --------------------------------------------------------
-
---
--- Structure de la table `ajouter`
---
-
-CREATE TABLE IF NOT EXISTS `ajouter` (
-  `Id_produit` int(11) NOT NULL DEFAULT '0',
-  `Id_panier` int(11) NOT NULL DEFAULT '0',
-  `quantite` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `identifiant`
---
-
-CREATE TABLE IF NOT EXISTS `identifiant` (
-`Id_id` int(11) NOT NULL,
-  `mdp` varchar(10) DEFAULT NULL,
-  `nom` varchar(50) DEFAULT NULL,
-  `prenom` varchar(50) DEFAULT NULL,
-  `pays` text,
-  `date_de_naissance` date DEFAULT NULL,
-  `email` varchar(50) DEFAULT NULL,
-  `numero` int(11) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Structure de la table `panier`
---
-
-CREATE TABLE IF NOT EXISTS `panier` (
-`Id_panier` int(11) NOT NULL,
-  `total` varchar(50) DEFAULT NULL,
-  `Id_id` int(11) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -93,24 +52,6 @@ INSERT INTO `produit` (`Id_produit`, `nom_produit`, `type_produit`, `details`, `
 --
 
 --
--- Index pour la table `ajouter`
---
-ALTER TABLE `ajouter`
- ADD PRIMARY KEY (`Id_produit`,`Id_panier`), ADD KEY `Id_panier` (`Id_panier`);
-
---
--- Index pour la table `identifiant`
---
-ALTER TABLE `identifiant`
- ADD PRIMARY KEY (`Id_id`);
-
---
--- Index pour la table `panier`
---
-ALTER TABLE `panier`
- ADD PRIMARY KEY (`Id_panier`), ADD KEY `Id_id` (`Id_id`);
-
---
 -- Index pour la table `produit`
 --
 ALTER TABLE `produit`
@@ -120,16 +61,6 @@ ALTER TABLE `produit`
 -- AUTO_INCREMENT pour les tables exportées
 --
 
---
--- AUTO_INCREMENT pour la table `identifiant`
---
-ALTER TABLE `identifiant`
-MODIFY `Id_id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT pour la table `panier`
---
-ALTER TABLE `panier`
-MODIFY `Id_panier` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT pour la table `produit`
 --
