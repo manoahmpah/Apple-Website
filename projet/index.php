@@ -20,7 +20,7 @@ unset($bdd);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style(2).css">
 
     <!-- fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -156,8 +156,8 @@ unset($bdd);
             <p>Pro. Beyond.</p>
 
             <div id="link_iphone14pro_frontpage">
-                <a href="">Learn more</a>
-                <a href="">Buy</a>
+                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
             </div>
 
             <div id="iphone14Pro_container">
