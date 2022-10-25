@@ -20,7 +20,7 @@ unset($bdd);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style -->
-    <link rel="stylesheet" href="style(2).css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,8 +37,9 @@ unset($bdd);
 
     <!-- la partie navbar -->
     <header id="header">
-
-        <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
+        <a href="">
+            <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
+        </a>
 
         <a href="">
             Mac
@@ -60,7 +61,7 @@ unset($bdd);
             <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
         </a>
 
-        <a href="">
+        <a href="./Account.php">
             <img id="account_icone" src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/user.png" />
         </a>
 
@@ -163,6 +164,19 @@ unset($bdd);
             <div id="iphone14Pro_container">
                 <img src="https://www.apple.com/v/iphone-14-pro/a/images/overview/hero/hero_iphone_14_pro__kzr001ge0262_large.jpg" alt="">
             </div>
+        </a>
+    </section>
+
+    <section>
+        <a href="">
+            <h2>
+                <?php echo $produits[5]->nom_produit ?>
+            </h2>
+            <div id="link_iphone14pro_frontpage">
+                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+            </div>
+
         </a>
     </section>
 </body>
