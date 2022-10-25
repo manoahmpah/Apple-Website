@@ -5,7 +5,7 @@ if (isset($_POST['Se_connecter'])) {
 
     require_once('sys/connexion.php');
     $sql = "SELECT * FROM identifiant WHERE email= $email ";
-    $results = $bdd->query($sql);
+    $results = $bdd->prepare($sql);
     $results->execute();
 
     if ($results->rowCount() > 0) {
