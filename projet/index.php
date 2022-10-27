@@ -151,7 +151,7 @@ unset($bdd);
 
             <!-- on va chercher les nom des produits dans la base de données -->
             <h2 id="nomiphone14">
-                <?php echo $produits[5]->nom_produit ?>
+                <?php echo $produits[4]->nom_produit ?>
             </h2>
 
             <p>Pro. Beyond.</p>
@@ -170,7 +170,7 @@ unset($bdd);
     <section>
         <a href="">
             <h2>
-                <?php echo $produits[5]->nom_produit ?>
+                <?php echo $produits[4]->nom_produit ?>
             </h2>
             <div id="link_iphone14pro_frontpage">
                 <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
