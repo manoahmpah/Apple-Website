@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,59 +24,101 @@
 
 <body>
 
-    <header id="header">
-        <a href="./index.php">
-            <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
-        </a>
+    <!-- si une session email est ouverte -->
+    <?php
+    if (isset($_SESSION['email'])) {
+    ?>
+        <header id="header">
+            <a href="./index.php">
+                <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
+            </a>
 
-        <a href="">
-            Mac
-        </a>
+            <a href="">
+                Mac
+            </a>
 
-        <a href="">
-            iPad
-        </a>
+            <a href="">
+                iPad
+            </a>
 
-        <a href="">
-            iPhone
-        </a>
+            <a href="">
+                iPhone
+            </a>
 
-        <a href="">
-            AirPods
-        </a>
+            <a href="">
+                AirPods
+            </a>
 
-        <a href="">
-            <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
-        </a>
+            <a href="">
+                <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
+            </a>
 
-        <a href="">
-            <img id="account_icone" src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/user.png" />
-        </a>
+            <a href="#">
+                <img id="account_icone" src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/user.png" />
+            </a>
+
+        </header>
+
+        <!-- si il y a aucune session d'ouverte -->
+    <?php } else {
+    ?>
 
 
-    </header>
+        <header id="header">
+            <a href="./index.php">
+                <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
+            </a>
 
-    <section id="fs">
-        <div>
-            <h1>Connectez-vous pour régler vos achats plus <br> rapidement.</h1>
-        </div>
+            <a href="">
+                Mac
+            </a>
 
-        <div id="container_Acount_input">
-            <h2>Connectez-vous à l’Apple Store</h2>
-            <form method="POST" action="./login.php">
-                <label for="email">
-                    <input type="email" name="email" id="email">
-                </label><br>
-                <label for="mdp">
-                    <input type="Password" name="mdp" id="mdp">
-                </label>
+            <a href="">
+                iPad
+            </a>
 
-                <br><input type="submit" name="Se_connecter" value="Se connecter">
-            </form>
+            <a href="">
+                iPhone
+            </a>
 
-            <p>Pas d’identifiant Apple ? <a href="">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
-        </div>
-    </section>
+            <a href="">
+                AirPods
+            </a>
+
+            <a href="">
+                <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
+            </a>
+
+            <a href="">
+                <img id="account_icone" src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/user.png" />
+            </a>
+
+
+        </header>
+
+        <section id="fs">
+            <div>
+                <h1>Connectez-vous pour régler vos achats plus <br> rapidement.</h1>
+            </div>
+
+            <div id="container_Acount_input">
+                <h2>Connectez-vous à l’Apple Store</h2>
+                <form method="POST" action="./login.php">
+                    <label for="email">
+                        <input type="email" name="email" id="email">
+                    </label><br>
+                    <label for="mdp">
+                        <input type="Password" name="mdp" id="mdp">
+                    </label>
+
+                    <br><input type="submit" name="Se_connecter" value="Se connecter">
+                </form>
+
+                <p>Pas d’identifiant Apple ? <a href="">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
+            </div>
+        </section>
 </body>
+
+<?php } ?>
 
 </html>

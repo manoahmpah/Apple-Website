@@ -1,4 +1,8 @@
 <?php
+
+session_start();
+
+echo $_SESSION['email'];
 //Connexion à la BD
 require_once('sys/connexion.php');
 //On stocke notre requête dans une variable sql
