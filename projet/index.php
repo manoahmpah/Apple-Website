@@ -125,13 +125,13 @@ unset($bdd);
         <a href="">
 
             <!-- on va chercher les nom des produits dans la base de données -->
-            <h2 id="nomiphone14">
+            <h2 id="nomiphone14" class="nomiphone14">
                 <?php echo $produits[4]->nom_produit ?>
             </h2>
 
             <p>Pro. Beyond.</p>
 
-            <div id="link_iphone14pro_frontpage">
+            <div class="link_iphone14pro_frontpage">
                 <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
                 <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
             </div>
@@ -142,17 +142,34 @@ unset($bdd);
         </a>
     </section>
 
-    <section>
-        <a href="">
-            <h2>
-                <?php echo $produits[4]->nom_produit ?>
-            </h2>
-            <div id="link_iphone14pro_frontpage">
-                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-            </div>
+    <section class="iphone14_frontpage" class="secondsection">
+        <div id="grid" class="secondsection">
+            <div>
+                <a href="">
+                    <h2 id="nomiphone14-2s" class="nomiphone14">
+                        <?php echo $produits[4]->nom_produit ?>
+                    </h2>
+                    <div class="link_iphone14pro_frontpage">
+                        <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                        <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    </div>
+                    <div id="iphone14-s2-div1-div2">
+                        <img src="https://www.apple.com/v/home/au/images/promos/iphone-14/promo_iphone14__b9mz75yhy02u_large.jpg" alt="">
+                    </div>
 
-        </a>
+                </a>
+            </div>
+            <div id="color-s2-div2">
+                <img id="centerimg-s2" src="https://www.apple.com/v/home/au/images/logos/apple-tv-4k/promo_tv4k_logo__5m5umvk10duu_large.png" alt="">
+                <h4 class="nomiphone14" id="smalltitle-s2">The Apple experience. Cinematic in every sense.</h4>
+                <div class="link_iphone14pro_frontpage">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 </body>
 <script src="app.js"></script>

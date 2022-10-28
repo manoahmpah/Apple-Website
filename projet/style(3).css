@@ -161,8 +161,7 @@ nav.Sticky ul {
     text-align: center;
 }
 
-#nomiphone14 {
-    color: white;
+.nomiphone14 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-weight: bold;
@@ -182,27 +181,27 @@ nav.Sticky ul {
 }
 
 
-#link_iphone14pro_frontpage {
+.link_iphone14pro_frontpage {
     text-align: center;
     padding-bottom: 1%;
 }
 
-#link_iphone14pro_frontpage a:nth-child(2) {
+.link_iphone14pro_frontpage a:nth-child(2) {
     padding: 1% 1% 0% 0%;
 }
 
-#link_iphone14pro_frontpage a img {
+.link_iphone14pro_frontpage a img {
     transform: translateY(30%);
 }
 
-#link_iphone14pro_frontpage a {
+.link_iphone14pro_frontpage a {
     color: royalblue;
     font-weight: bold;
     font-size: 20px;
     font-family: 'Roboto', sans-serif;
 }
 
-#link_iphone14pro_frontpage a:hover {
+.link_iphone14pro_frontpage a:hover {
     text-decoration: underline;
 }
 
@@ -213,4 +212,40 @@ nav.Sticky ul {
 
 #header a:nth-child(1) {
     padding-left: 0px;
+}
+
+.secondsection {
+    background-color: white;
+}
+
+#nomiphone14 {
+    color: white;
+}
+
+#nomiphone14-2s {
+    color: black;
+}
+
+#grid {
+    display: grid;
+    grid: auto-flow dense / 50% 50%;
+}
+
+#smalltitle-s2 {
+    font-size: 25px;
+}
+
+#centerimg-s2 {
+    position: relative;
+    left: 50%;
+    top: 4%;
+    transform: translateX(-50%);
+}
+
+#color-s2-div2 {
+    background-color: #d8d8d8;
+}
+
+#iphone14-s2-div1-div2 img {
+    text-align: center;
 }
