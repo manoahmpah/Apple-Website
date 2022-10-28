@@ -59,6 +59,7 @@ session_start();
 
         </header>
 
+
         <!-- si il y a aucune session d'ouverte -->
     <?php } else {
     ?>
