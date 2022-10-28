@@ -24,7 +24,7 @@ unset($bdd);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style -->
-    <link rel="stylesheet" href="style(3).css">
+    <link rel="stylesheet" href="style(1).css">
 
     <!-- fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -161,10 +161,13 @@ unset($bdd);
             </div>
             <div id="color-s2-div2">
                 <img id="centerimg-s2" src="https://www.apple.com/v/home/au/images/logos/apple-tv-4k/promo_tv4k_logo__5m5umvk10duu_large.png" alt="">
-                <h4 class="nomiphone14" id="smalltitle-s2">The Apple experience. Cinematic in every sense.</h4>
+                <h4 class="nomiphone14" id="smalltitle-s2">The Apple experience. <br> Cinematic in every sense.</h4>
                 <div class="link_iphone14pro_frontpage">
                     <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
                     <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
+                <div id="AppleTV_img">
+                    <img src="./img/AppleTV.png" alt="">
                 </div>
             </div>
         </div>
