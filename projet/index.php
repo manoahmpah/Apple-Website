@@ -143,7 +143,10 @@ unset($bdd);
     </section>
 
     <section class="iphone14_frontpage" class="secondsection">
-        <div id="grid" class="secondsection">
+
+        <!-- premiere grid  -->
+        <div class="grid" class="secondsection">
+            <!-- premiere partie  -->
             <div>
                 <a href="">
                     <h2 id="nomiphone14-2s" class="nomiphone14">
@@ -159,18 +162,46 @@ unset($bdd);
 
                 </a>
             </div>
+            <!-- deuxieme partie -->
             <div id="color-s2-div2">
-                <img id="centerimg-s2" src="https://www.apple.com/v/home/au/images/logos/apple-tv-4k/promo_tv4k_logo__5m5umvk10duu_large.png" alt="">
+                <img class="centerimg-s2" src="https://www.apple.com/v/home/au/images/logos/apple-tv-4k/promo_tv4k_logo__5m5umvk10duu_large.png" alt="">
                 <h4 class="nomiphone14" id="smalltitle-s2">The Apple experience. <br> Cinematic in every sense.</h4>
                 <div class="link_iphone14pro_frontpage">
                     <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
                     <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
                 </div>
-                <div id="AppleTV_img">
+                <div>
                     <img src="./img/AppleTV.png" alt="">
                 </div>
             </div>
         </div>
+
+        <!-- deuxieme grid -->
+        <div class="grid">
+            <!-- premiere partie -->
+            <div>
+                <img class="logo_Apple_Watch" src="./img/AppleWatch_logo.png" alt="">
+                <div class="link_iphone14pro_frontpage">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
+                <div id="section2-div2-div1-div2">
+                    <img src="./img/AppleWatch_img.png" alt="">
+                </div>
+            </div>
+            <!-- deuxieme partie -->
+            <div id="section2-div2-div2">
+                <img class="logo_Apple_Watch" src="./img/AppleWatch_serie8_logo.png" alt="">
+                <div class="link_iphone14pro_frontpage">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
+                <div id="section2-div2-div2-div2">
+                    <img src="./img/AppleWatch_serie8_img.png" alt="">
+                </div>
+            </div>
+        </div>
+
 
 
     </section>

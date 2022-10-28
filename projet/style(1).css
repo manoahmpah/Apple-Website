@@ -226,24 +226,24 @@ nav.Sticky ul {
     color: black;
 }
 
-#grid {
+.grid {
     display: grid;
     grid: auto-flow dense / 50% 50%;
+    background-color: white;
+    text-align: center;
 }
 
 #smalltitle-s2 {
     font-size: 20px;
 }
 
-#centerimg-s2 {
+.centerimg-s2 {
     position: relative;
-    left: 50%;
     top: 9%;
-    transform: translateX(-50%);
 }
 
 #color-s2-div2 {
-    background-color: hsla(0, 0%, 85%, 0.326);
+    background-color: #f5f5f7;
     margin-top: 1.5%;
 }
 
@@ -251,9 +251,26 @@ nav.Sticky ul {
     width: 100%;
 }
 
-#AppleTV_img img {
-    width: 50%;
+
+#section2-div2-div2 {
+    background-color: black;
+}
+
+.logo_Apple_Watch {
+    width: 27%;
+    padding-top: 10%;
+}
+
+#section2-div2-div1-div2 img {
+    width: 100%;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
+    padding-top: 15%;
+}
+
+#section2-div2-div2-div2 img {
+    padding-top: 10%;
+    width: 60%;
+    position: relative;
 }
