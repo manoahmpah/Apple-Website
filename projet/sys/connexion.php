@@ -3,7 +3,7 @@
 	$host = 'localhost';
 	$dbname = 'apple';
 	$user = 'root';
-	$pass = 'root';
+	$pass = '';
 	$options = array(
 		PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'
 	);
@@ -13,4 +13,3 @@
 	} catch(Exception $e) {
 		die('Connexion a la base de donnees impossible !');
 	}
-?>

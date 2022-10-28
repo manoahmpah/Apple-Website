@@ -1,8 +1,6 @@
 <?php
 
 session_start();
-
-echo $_SESSION['email'];
 //Connexion à la BD
 require_once('sys/connexion.php');
 //On stocke notre requête dans une variable sql
@@ -13,6 +11,8 @@ $results = $bdd->query($sql);
 $produits = $results->fetchAll(PDO::FETCH_OBJ);
 //Déconnexion de la base de données
 unset($bdd);
+
+
 ?>
 
 <!DOCTYPE html>
