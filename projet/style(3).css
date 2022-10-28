@@ -4,35 +4,6 @@ body {
     box-sizing: border-box;
 }
 
-#header {
-    width: 99%;
-    background: rgba(0, 0, 0, 0.8);
-    /* position: fixed;
-    top: 0; */
-    padding: 0.5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-}
-
-
-
-#header a {
-    color: white;
-    text-decoration: none;
-    padding: 0% 0% 0% 4%;
-    font-size: small;
-    font-family: 'Roboto', sans-serif;
-    letter-spacing: 0.4px;
-    color: #f5f5f7;
-
-}
-
-#icon_header {
-    padding-left: 0px;
-}
-
 #image_ipad {
 
     width: 75%;

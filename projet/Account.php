@@ -28,36 +28,7 @@ session_start();
     <?php
     if (isset($_SESSION['email'])) {
     ?>
-        <header id="header">
-            <a href="./index.php">
-                <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
-            </a>
-
-            <a href="">
-                Mac
-            </a>
-
-            <a href="">
-                iPad
-            </a>
-
-            <a href="">
-                iPhone
-            </a>
-
-            <a href="">
-                AirPods
-            </a>
-
-            <a href="">
-                <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
-            </a>
-
-            <a href="#">
-                <img id="account_icone" src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/user.png" />
-            </a>
-
-        </header>
+        <?php require 'header.php' ?>
 
 
         <!-- si il y a aucune session d'ouverte -->
@@ -65,37 +36,7 @@ session_start();
     ?>
 
 
-        <header id="header">
-            <a href="./index.php">
-                <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />
-            </a>
-
-            <a href="">
-                Mac
-            </a>
-
-            <a href="">
-                iPad
-            </a>
-
-            <a href="">
-                iPhone
-            </a>
-
-            <a href="">
-                AirPods
-            </a>
-
-            <a href="">
-                <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
-            </a>
-
-            <a href="">
-                <img id="account_icone" src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/user.png" />
-            </a>
-
-
-        </header>
+        <?php require 'header.php' ?>
 
         <section id="fs">
             <div>
