@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- le css -->
     <link rel="stylesheet" href="header.css">
     <title>Document</title>
 </head>
 
 <body>
+
+    <!-- le header qui va être dupliqué sur tous les pages -->
     <header id="header">
         <a href="./index.php">
             <img src="https://img.icons8.com/material-rounded/24/f5f5f7/mac-os.png" />

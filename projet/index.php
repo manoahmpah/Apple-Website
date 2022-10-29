@@ -124,8 +124,8 @@ unset($bdd);
     <section class="iphone14_frontpage">
         <a href="">
 
-            <!-- on va chercher les nom des produits dans la base de données -->
             <h2 id="nomiphone14" class="nomiphone14">
+                <!-- on va chercher le nom des produits dans la base de données -->
                 <?php echo $produits[4]->nom_produit ?>
             </h2>
 
@@ -162,6 +162,7 @@ unset($bdd);
 
                 </a>
             </div>
+
             <!-- deuxieme partie -->
             <div id="color-s2-div2">
                 <img class="centerimg-s2" src="https://www.apple.com/v/home/au/images/logos/apple-tv-4k/promo_tv4k_logo__5m5umvk10duu_large.png" alt="">
@@ -178,6 +179,7 @@ unset($bdd);
 
         <!-- deuxieme grid -->
         <div class="grid">
+
             <!-- premiere partie -->
             <div>
                 <img class="logo_Apple_Watch" src="./img/AppleWatch_logo.png" alt="">
@@ -189,6 +191,7 @@ unset($bdd);
                     <img src="./img/AppleWatch_img.png" alt="">
                 </div>
             </div>
+
             <!-- deuxieme partie -->
             <div id="section2-div2-div2">
                 <img class="logo_Apple_Watch" src="./img/AppleWatch_serie8_logo.png" alt="">

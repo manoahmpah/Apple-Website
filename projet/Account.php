@@ -1,5 +1,16 @@
 <?php
 session_start();
+
+//Connexion à la BD
+require_once('sys/connexion.php');
+//On stocke notre requête dans une variable sql
+$sql = 'SELECT * FROM identifiant';
+//On envoie la requête à la base de données et on stock les résultats dans $results
+$results = $bdd->query($sql);
+//On transforme les résultats en un tableau associatif compréhensible par PHP
+$identifiant = $results->fetchAll(PDO::FETCH_OBJ);
+//Déconnexion de la base de données
+unset($bdd);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,14 +39,26 @@ session_start();
     <?php
     if (isset($_SESSION['email'])) {
     ?>
+
+        <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
         <?php require 'header.php' ?>
 
+        <div>
+            <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
+        </div>
+
+
+        <!-- si le compte admin est connecté, il aura acces à plein d'informations que des simples utilisateurs n'aurrons pas -->
+        <?php
+        if ($_SESSION['email'] = "mpahmanoah@gmail.com") { ?>
+            <p>Il y a actuellement <?php echo COUNT($identifiant) ?> de personne(s) qui a/ont un compte </p>
+        <?php } ?>
 
         <!-- si il y a aucune session d'ouverte -->
     <?php } else {
     ?>
 
-
+        <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
         <?php require 'header.php' ?>
 
         <section id="fs">
@@ -45,6 +68,8 @@ session_start();
 
             <div id="container_Acount_input">
                 <h2>Connectez-vous à l’Apple Store</h2>
+
+                <!-- le formulaire pour se connecter si la personne à un compte -->
                 <form method="POST" action="./login.php">
                     <label for="email">
                         <input type="email" name="email" id="email">
@@ -55,6 +80,7 @@ session_start();
 
                     <br><input type="submit" name="Se_connecter" value="Se connecter">
                 </form>
+
 
                 <p>Pas d’identifiant Apple ? <a href="">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
             </div>
