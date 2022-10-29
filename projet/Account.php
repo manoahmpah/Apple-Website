@@ -35,7 +35,7 @@ unset($bdd);
 
 <body>
 
-    <!-- si une session email est ouverte -->
+    <!-- si une session email est ouverte + le sys de deconnexion -->
     <?php
     if (isset($_SESSION['email'])) {
     ?>
