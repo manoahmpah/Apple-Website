@@ -97,7 +97,7 @@ unset($bdd);
                 </form>
 
 
-                <p>Pas d’identifiant Apple ? <a href="">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
+                <p>Pas d’identifiant Apple ? <a href="./inscription.php">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
             </div>
         </section>
 </body>
