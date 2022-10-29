@@ -13,7 +13,7 @@ $identifiant = $results->fetchAll(PDO::FETCH_OBJ);
 unset($bdd);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
 
@@ -39,20 +39,27 @@ unset($bdd);
     <?php
     if (isset($_SESSION['email'])) {
     ?>
-
-        <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
         <?php require 'header.php' ?>
+        <div id="nom-email-ifco">
+            <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
 
-        <div>
-            <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
+
+            <div>
+                <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
+            </div>
+
+
+            <!-- si le compte admin est connecté, il aura acces à plein d'informations que des simples utilisateurs n'aurrons pas -->
+            <?php
+            if ($_SESSION['email'] = "mpahmanoah@apple.com") { ?>
+                <p>Il y a actuellement <?php echo COUNT($identifiant) ?> de personne(s) qui a/ont un compte </p>
+            <?php } ?>
+
+            <form action="./deconnexion.php" method="POST">
+                <input type="submit" value="Se déconnecter" name="Se_deconnecter">
+            </form>
         </div>
 
-
-        <!-- si le compte admin est connecté, il aura acces à plein d'informations que des simples utilisateurs n'aurrons pas -->
-        <?php
-        if ($_SESSION['email'] = "mpahmanoah@gmail.com") { ?>
-            <p>Il y a actuellement <?php echo COUNT($identifiant) ?> de personne(s) qui a/ont un compte </p>
-        <?php } ?>
 
         <!-- si il y a aucune session d'ouverte -->
     <?php } else {
