@@ -55,11 +55,19 @@ unset($bdd);
                 <p>Il y a actuellement <?php echo COUNT($identifiant) ?> de personne(s) qui a/ont un compte </p>
             <?php } ?>
 
-            <form action="./deconnexion.php" method="POST">
+            <form action="Account.php" method="POST">
                 <input type="submit" value="Se déconnecter" name="Se_deconnecter">
             </form>
         </div>
 
+        <!-- sys de deconexion -->
+        <?php
+        if (isset($_POST['Se_deconnecter'])) {
+            session_destroy();
+            header("Location:Account.php");
+        }
+
+        ?>
 
         <!-- si il y a aucune session d'ouverte -->
     <?php } else {
