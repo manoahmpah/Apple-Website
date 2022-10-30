@@ -29,7 +29,9 @@ unset($bdd);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Account.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="Account(0).css">
     <title>Apple (France)</title>
 </head>
 
@@ -51,7 +53,7 @@ unset($bdd);
 
             <!-- si le compte admin est connecté, il aura acces à plein d'informations que des simples utilisateurs n'aurrons pas -->
             <?php
-            if ($_SESSION['email'] = "mpahmanoah@apple.com") { ?>
+            if ($_SESSION['email'] == "mpahmanoah@apple.com") { ?>
                 <p>Il y a actuellement <?php echo COUNT($identifiant) ?> de personne(s) qui a/ont un compte </p>
             <?php } ?>
 
@@ -87,10 +89,10 @@ unset($bdd);
                 <!-- le formulaire pour se connecter si la personne à un compte -->
                 <form method="POST" action="./login.php">
                     <label for="email">
-                        <input type="email" name="email" id="email">
+                        <input type="email" name="email" id="email" placeholder="email">
                     </label><br>
                     <label for="mdp">
-                        <input type="Password" name="mdp" id="mdp">
+                        <input type="Password" name="mdp" id="mdp" placeholder="Mot de Passe">
                     </label>
 
                     <br><input type="submit" name="Se_connecter" value="Se connecter">
