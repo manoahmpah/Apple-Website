@@ -22,11 +22,6 @@ if (isset($_POST['Se_connecter'])) {
             header("Location:index.php");
         }
     } else {
-        // $mdp = password_hash($mdp, PASSWORD_DEFAULT);
-        // $sql = "INSERT INTO identifiant(email, password) VALUES('$email', '$mdp') ";
-        // $req = $bdd->prepare($sql);
-        // $req->execute();
-        // echo 'Enregistrement effectuer';
         header("Location:Account.php");
         exit;
     }

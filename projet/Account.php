@@ -46,15 +46,27 @@ unset($bdd);
             <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
 
 
-            <div>
-                <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
-            </div>
+
 
 
             <!-- si le compte admin est connecté, il aura acces à plein d'informations que des simples utilisateurs n'aurrons pas -->
             <?php
             if ($_SESSION['email'] == "mpahmanoah@apple.com") { ?>
-                <p>Il y a actuellement <?php echo COUNT($identifiant) ?> de personne(s) qui a/ont un compte </p>
+
+                <div class="wrapper">
+                    <div class="one">
+                        <div>
+                            <h2>Vous êtes connecté sur le compte Admin : <?php echo $_SESSION['email'] ?></h2>
+                        </div>
+                    </div>
+                    <div class="two">Deux</div>
+                    <div class="three">Trois</div>
+                </div>
+
+            <?php } else { ?>
+                <div>
+                    <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
+                </div>
             <?php } ?>
 
             <form action="Account.php" method="POST">
