@@ -99,7 +99,7 @@ session_start();
 
 				<p>
 					<label for="phone">
-						<input type="tel" class="form-input" name="phone" placeholder="01 23 45 67 89" pattern="[0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2} [0-9]{2}" required>
+						<input type="tel" class="form-input" name="phone" placeholder="01 23 45 67 89" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
 					</label>
 					<!-- format: 12 34 56 78 90 -->
 				</p>

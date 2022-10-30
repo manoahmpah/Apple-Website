@@ -4,7 +4,7 @@ session_start();
 //Connexion à la BD
 require_once('sys/connexion.php');
 //On stocke notre requête dans une variable sql
-$sql = 'SELECT * FROM identifiant';
+$sql = 'SELECT COUNT(*) FROM identifiant WHERE pays = "France"';
 //On envoie la requête à la base de données et on stock les résultats dans $results
 $results = $bdd->query($sql);
 //On transforme les résultats en un tableau associatif compréhensible par PHP
@@ -42,6 +42,10 @@ unset($bdd);
     if (isset($_SESSION['email'])) {
     ?>
         <?php require 'header.php' ?>
+        <?php
+
+        echo var_dump($identifiant);
+        ?>
         <div id="nom-email-ifco">
             <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
 
@@ -56,10 +60,71 @@ unset($bdd);
                 <div class="wrapper">
                     <div class="one">
                         <div>
-                            <h2>Vous êtes connecté sur le compte Admin : <?php echo $_SESSION['email'] ?></h2>
+                            <h2>Vous êtes connecté sur le compte administrateur : <?php echo $_SESSION['email'] ?></h2>
                         </div>
                     </div>
-                    <div class="two">Deux</div>
+                    <div class="two">
+                        <div>
+                            <canvas id="myChart"></canvas>
+                        </div>
+
+                        <!-- Scripte qui permet de mettre un diagramme -->
+                        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                        <script>
+                            const labels = [
+
+                            ];
+
+                            const data = {
+                                labels: [
+                                    "Afghanistan",
+                                    "Allemagne",
+                                    "Angleterre",
+                                    "Belgique",
+                                    "Brésil",
+                                    "Bulgarie",
+                                    "Canada",
+                                    "Colombie",
+                                    "Croatie",
+                                    "Danemark",
+                                    "Djibouti",
+                                    "Dominique",
+                                    "Egypte",
+                                    "Equateur",
+                                    "Espagne",
+                                    "Fidji",
+                                    "Finlande",
+                                    "France"
+                                ],
+                                datasets: [{
+                                    label: 'My First Dataset',
+                                    data: [300, 50, 100, 78, 52, 158, 20, 498, 367, 205, 24, 15, 24, 157, 3, 76, 95, 48],
+                                    backgroundColor: [
+                                        'rgb(255, 99, 132)',
+                                        'rgb(54, 162, 235)',
+                                        'rgb(255, 205, 86)'
+                                    ],
+                                    hoverOffset: 50
+                                }]
+                            };
+
+                            const config = {
+                                type: 'doughnut',
+                                data: data,
+                                options: {}
+                            };
+                        </script>
+                        <script>
+                            const myChart = new Chart(
+                                document.getElementById('myChart'),
+                                config
+                            );
+                        </script>
+
+                        <form action="Account.php" method="POST">
+                            <input type="submit" value="Se déconnecter" name="Se_deconnecter">
+                        </form>
+                    </div>
                     <div class="three">Trois</div>
                 </div>
 
@@ -67,11 +132,12 @@ unset($bdd);
                 <div>
                     <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
                 </div>
+                <form action="Account.php" method="POST">
+                    <input type="submit" value="Se déconnecter" name="Se_deconnecter">
+                </form>
             <?php } ?>
 
-            <form action="Account.php" method="POST">
-                <input type="submit" value="Se déconnecter" name="Se_deconnecter">
-            </form>
+
         </div>
 
         <!-- sys de deconexion -->
