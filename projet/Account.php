@@ -1,14 +1,98 @@
 <?php
 session_start();
 
-//Connexion à la BD
 require_once('sys/connexion.php');
-//On stocke notre requête dans une variable sql
-$sql = 'SELECT COUNT(*) FROM identifiant WHERE pays = "France"';
-//On envoie la requête à la base de données et on stock les résultats dans $results
+
+// donnée pour la France
+$sql = 'SELECT COUNT(*) AS FRANCE FROM identifiant WHERE pays = "France"';
 $results = $bdd->query($sql);
-//On transforme les résultats en un tableau associatif compréhensible par PHP
-$identifiant = $results->fetchAll(PDO::FETCH_OBJ);
+$identifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donnée pour Afghanistan
+$sql1 = 'SELECT COUNT(*) AS Afghanistan FROM identifiant WHERE pays = "Afghanistan"';
+$results = $bdd->query($sql1);
+$AFidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour Allemagne
+$sql2 = 'SELECT COUNT(*) AS Allemagne FROM identifiant WHERE pays = "Allemagne"';
+$results = $bdd->query($sql2);
+$ALidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donné pour Angleterre
+$sql3 = 'SELECT COUNT(*) AS Angleterre FROM identifiant WHERE pays = "Angleterre"';
+$results = $bdd->query($sql3);
+$ANidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Belgique
+$sql4 = 'SELECT COUNT(*) AS Belgique FROM identifiant WHERE pays = "Belgique"';
+$results = $bdd->query($sql4);
+$BEidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Brésil
+$sql5 = 'SELECT COUNT(*) AS Brésil FROM identifiant WHERE pays = "Brésil"';
+$results = $bdd->query($sql5);
+$BRidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Bulgarie
+$sql6 = 'SELECT COUNT(*) AS Bulgarie FROM identifiant WHERE pays = "Bulgarie"';
+$results = $bdd->query($sql6);
+$BUidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Canada
+$sql7 = 'SELECT COUNT(*) AS Canada FROM identifiant WHERE pays = "Canada"';
+$results = $bdd->query($sql7);
+$CAidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Colombie
+$sql8 = 'SELECT COUNT(*) AS Colombie FROM identifiant WHERE pays = "Colombie"';
+$results = $bdd->query($sql8);
+$COidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Croatie
+$sql9 = 'SELECT COUNT(*) AS Croatie FROM identifiant WHERE pays = "Croatie"';
+$results = $bdd->query($sql9);
+$CRidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Danemark
+$sql10 = 'SELECT COUNT(*) AS Danemark FROM identifiant WHERE pays = "Danemark"';
+$results = $bdd->query($sql10);
+$DAidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Djibouti
+$sql11 = 'SELECT COUNT(*) AS Djibouti FROM identifiant WHERE pays = "Djibouti"';
+$results = $bdd->query($sql11);
+$BJidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Dominique
+$sql12 = 'SELECT COUNT(*) AS Dominique FROM identifiant WHERE pays = "Dominique"';
+$results = $bdd->query($sql12);
+$DOidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Egypte
+$sql13 = 'SELECT COUNT(*) AS Egypte FROM identifiant WHERE pays = "Egypte"';
+$results = $bdd->query($sql13);
+$EGidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Equateur
+$sql14 = 'SELECT COUNT(*) AS Equateur FROM identifiant WHERE pays = "Equateur"';
+$results = $bdd->query($sql14);
+$EQidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Espagne
+$sql15 = 'SELECT COUNT(*) AS Espagne FROM identifiant WHERE pays = "Espagne"';
+$results = $bdd->query($sql15);
+$ESidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Fidji
+$sql16 = 'SELECT COUNT(*) AS Fidji FROM identifiant WHERE pays = "Fidji"';
+$results = $bdd->query($sql16);
+$FIDidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
+// donée pour la Finlande
+$sql17 = 'SELECT COUNT(*) AS Finlande FROM identifiant WHERE pays = "Finlande"';
+$results = $bdd->query($sql17);
+$FINidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+
 //Déconnexion de la base de données
 unset($bdd);
 ?>
@@ -41,10 +125,8 @@ unset($bdd);
     <?php
     if (isset($_SESSION['email'])) {
     ?>
-        <?php require 'header.php' ?>
-        <?php
-
-        echo var_dump($identifiant);
+        <?php require 'header.php';
+        var_dump($AFidentifiant);
         ?>
         <div id="nom-email-ifco">
             <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
@@ -98,11 +180,45 @@ unset($bdd);
                                 ],
                                 datasets: [{
                                     label: 'My First Dataset',
-                                    data: [300, 50, 100, 78, 52, 158, 20, 498, 367, 205, 24, 15, 24, 157, 3, 76, 95, 48],
+                                    data: [<?php echo $AFidentifiant[0]['Afghanistan']; ?>,
+                                        <?php echo $ALidentifiant[0]['Allemagne']; ?>,
+                                        <?php echo $ANidentifiant[0][' Angleterre']; ?>,
+                                        <?php echo $BEidentifiant[0]['Belgique']; ?>,
+                                        <?php echo $BRidentifiant[0]['Brésil']; ?>,
+                                        <?php echo $BUidentifiant[0]['Bulgarie']; ?>,
+                                        <?php echo $CAidentifiant[0]['Canada']; ?>,
+                                        <?php echo $COidentifiant[0]['Colombie']; ?>,
+                                        <?php echo $CRidentifiant[0]['Croatie']; ?>,
+                                        <?php echo $DAidentifiant[0]['Danemark']; ?>,
+                                        <?php echo $DJidentifiant[0]['Djibouti']; ?>,
+                                        <?php echo $DOidentifiant[0]['Dominique']; ?>,
+                                        <?php echo $EGidentifiant[0]['Egypte']; ?>,
+                                        <?php echo $EQidentifiant[0]['Equateur']; ?>,
+                                        <?php echo $ESidentifiant[0]['Espagne']; ?>,
+                                        <?php echo $FIDidentifiant[0]['Fidji']; ?>,
+                                        <?php echo $FINidentifiant[0]['Finlande']; ?>,
+                                        <?php echo $identifiant[0]['FRANCE']; ?>
+                                    ],
+
                                     backgroundColor: [
-                                        'rgb(255, 99, 132)',
-                                        'rgb(54, 162, 235)',
-                                        'rgb(255, 205, 86)'
+                                        '#FA2400',
+                                        '#C80BD6',
+                                        '#1F18ED',
+                                        '#0BB4D6',
+                                        '#0CFA48',
+                                        '#FA9300',
+                                        '#D60B59',
+                                        '#0BD6A5',
+                                        '#B9FA0C',
+                                        '#FAE300',
+                                        '#0BD672',
+                                        '#D60E0B',
+                                        '#FAC10C',
+                                        '#C5FA00',
+                                        '#0BD6A0',
+                                        '#D60B51',
+                                        '#FA9601',
+                                        '#FA7800',
                                     ],
                                     hoverOffset: 50
                                 }]
