@@ -24,7 +24,10 @@ unset($bdd);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- style -->
-    <link rel="stylesheet" href="style(1).css">
+    <link rel="stylesheet" href="style.css">
+
+    <!-- logo Apple -->
+    <link rel="icon" type="image/png" sizes="16x16" href="./img/icons8-mac-os-30.png">
 
     <!-- fonts google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,6 +35,7 @@ unset($bdd);
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="import" href="component.html">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 
@@ -201,6 +205,31 @@ unset($bdd);
                 </div>
                 <div id="section2-div2-div2-div2">
                     <img src="./img/AppleWatch_serie8_img.png" alt="">
+                </div>
+            </div>
+        </div>
+
+        <!-- troixieme partie -->
+        <div class="grid">
+            <div id="section2-div3-div1">
+                <h1>AirPods PRO</h1>
+                <h4>Rebuilt the sound up</h4>
+                <div class="link_iphone14pro_frontpage">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
+                <div>
+                    <img id="AirPods_pro_img" src="./img/AirPods_pro_img.png" alt="">
+                </div>
+            </div>
+            <div>
+                <img id="logo_apple_card" src="./img/Card_logo.png" alt="">
+                <div class="link_iphone14pro_frontpage">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
+                <div>
+                    <img id="card_img" src="./img/card_img.png" alt="">
                 </div>
             </div>
         </div>

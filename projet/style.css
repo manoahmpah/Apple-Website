@@ -62,6 +62,7 @@ body {
     transition: opacity .4s;
     visibility: hidden;
     opacity: 0;
+
 }
 
 .overlay:target {
@@ -231,6 +232,7 @@ nav.Sticky ul {
     grid: auto-flow dense / 50% 50%;
     background-color: white;
     text-align: center;
+    padding: 1%;
 }
 
 #smalltitle-s2 {
@@ -273,4 +275,27 @@ nav.Sticky ul {
     padding-top: 10%;
     width: 60%;
     position: relative;
+}
+
+#section2-div3-div1 {
+    background-color: black;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+#AirPods_pro_img {
+    width: 63%;
+    transform: translateY(6%);
+
+}
+
+#card_img {
+    width: 60%;
+
+}
+
+
+#logo_apple_card {
+    width: 38%;
+    padding-top: 9%;
 }
