@@ -61,7 +61,7 @@ $DAidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
 // donée pour la Djibouti
 $sql11 = 'SELECT COUNT(*) AS Djibouti FROM identifiant WHERE pays = "Djibouti"';
 $results = $bdd->query($sql11);
-$BJidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
+$DJidentifiant = $results->fetchAll(PDO::FETCH_ASSOC);
 
 // donée pour la Dominique
 $sql12 = 'SELECT COUNT(*) AS Dominique FROM identifiant WHERE pays = "Dominique"';
@@ -125,9 +125,7 @@ unset($bdd);
     <?php
     if (isset($_SESSION['email'])) {
     ?>
-        <?php require 'header.php';
-        var_dump($AFidentifiant);
-        ?>
+        <?php require 'header.php'; ?>
         <div id="nom-email-ifco">
             <!-- commme il y a une répétion du header on a préferé le mettre dans un ficher et ensuite l'appeler plusieurs fois -->
 
@@ -140,11 +138,15 @@ unset($bdd);
             if ($_SESSION['email'] == "mpahmanoah@apple.com") { ?>
 
                 <div class="wrapper">
+
+                    <!-- Grid en haut a gauche -->
                     <div class="one">
                         <div>
                             <h2>Vous êtes connecté sur le compte administrateur : <?php echo $_SESSION['email'] ?></h2>
                         </div>
                     </div>
+
+                    <!-- Grid a droite -->
                     <div class="two">
                         <div>
                             <canvas id="myChart"></canvas>
@@ -182,7 +184,7 @@ unset($bdd);
                                     label: 'My First Dataset',
                                     data: [<?php echo $AFidentifiant[0]['Afghanistan']; ?>,
                                         <?php echo $ALidentifiant[0]['Allemagne']; ?>,
-                                        <?php echo $ANidentifiant[0][' Angleterre']; ?>,
+                                        <?php echo $ANidentifiant[0]['Angleterre']; ?>,
                                         <?php echo $BEidentifiant[0]['Belgique']; ?>,
                                         <?php echo $BRidentifiant[0]['Brésil']; ?>,
                                         <?php echo $BUidentifiant[0]['Bulgarie']; ?>,
@@ -197,7 +199,7 @@ unset($bdd);
                                         <?php echo $ESidentifiant[0]['Espagne']; ?>,
                                         <?php echo $FIDidentifiant[0]['Fidji']; ?>,
                                         <?php echo $FINidentifiant[0]['Finlande']; ?>,
-                                        <?php echo $identifiant[0]['FRANCE']; ?>
+                                        <?php echo $identifiant[0]['FRANCE']; ?>, ,
                                     ],
 
                                     backgroundColor: [
@@ -237,11 +239,14 @@ unset($bdd);
                             );
                         </script>
 
+                    </div>
+
+                    <!-- Grid en bas a gauche -->
+                    <div class="three">
                         <form action="Account.php" method="POST">
                             <input type="submit" value="Se déconnecter" name="Se_deconnecter">
                         </form>
                     </div>
-                    <div class="three">Trois</div>
                 </div>
 
             <?php } else { ?>
@@ -260,7 +265,7 @@ unset($bdd);
         <?php
         if (isset($_POST['Se_deconnecter'])) {
             session_destroy();
-            header("Location:Account.php");
+            header("Location:index.php");
         }
 
         ?>

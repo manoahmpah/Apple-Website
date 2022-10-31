@@ -56,6 +56,8 @@ session_start();
 
 				<p>
 					PAYS / RÉGION <br>
+					<!--* Si il y a ajout ou suppression d'un pays il faut ajouter/supprimer la requete dans Account.php
+						* ajouter ou supprimer les infos qui rendre dans le donuts (Grid:2) dans Account.php -->
 					<select class="form-input" name="pays">
 						<option value="Afghanistan">Afghanistan</option>
 						<option value="Allemagne">Allemagne</option>
@@ -99,7 +101,7 @@ session_start();
 
 				<p>
 					<label for="phone">
-						<input type="tel" class="form-input" name="phone" placeholder="01 23 45 67 89" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
+						<input type="tel" class="form-input" name="phone" placeholder="0123456789" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
 					</label>
 					<!-- format: 12 34 56 78 90 -->
 				</p>
