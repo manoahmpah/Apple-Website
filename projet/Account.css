@@ -127,7 +127,7 @@
 }
 
 .one {
-    border: 5px black solid;
+    border: 1px black solid;
     border-radius: 20px;
     text-align: center;
     background-color: gold;
@@ -138,14 +138,14 @@
 }
 
 .two {
-    border: 5px black solid;
+    border: 1px black solid;
     grid-row: 1 / 7;
     grid-column: 2;
     border-radius: 20px;
 }
 
 .three {
-    border: 5px black solid;
+    border: 1px black solid;
     grid-column: 1;
     grid-row: 2 / 7;
     border-radius: 20px;
@@ -163,5 +163,41 @@
     width: fit-content;
     margin: auto;
     transform: translateY(25%);
+    font-family: 'Roboto', sans-serif;
+}
+
+#container_info_sur_cli p {
+    width: 30%;
+    margin: auto;
+}
+
+#container_info_sur_cli {
+    transform: translateY(50%);
+}
+
+#sedeconnecterADM {
+    cursor: pointer;
+    padding: 1.5% 0% 1.5% 0%;
+    color: white;
+    border-radius: 7px;
+    border: none;
+    background-color: royalblue;
+    width: 30%;
+    margin-left: 50%;
+    transform: translate(-50%);
+}
+
+
+/* Partie utilisateur */
+#one {
+    border: 1px black solid;
+    border-radius: 20px;
+    text-align: center;
+    background-color: gray;
+    color: white;
+    width: 50%;
+    margin: auto;
+    padding: 2%;
+    margin-top: 1%;
     font-family: 'Roboto', sans-serif;
 }

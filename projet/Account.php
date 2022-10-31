@@ -2,6 +2,18 @@
 session_start();
 
 require_once('sys/connexion.php');
+
+
+
+// Pour prendre les infos de l'utilisateurs
+if (isset($_SESSION['email'])) {
+    $email = $_SESSION['email'];
+    $sql48 = "SELECT * FROM identifiant WHERE email = '{$email}'";
+    $results = $bdd->query($sql48);
+    $identifiant48 = $results->fetchAll(PDO::FETCH_OBJ);
+}
+
+
 // Pour savoir le nombre d'utilisateurs
 $sql78 = 'SELECT * FROM identifiant';
 $results = $bdd->query($sql78);
@@ -208,18 +220,18 @@ unset($bdd);
                                     ],
 
                                     backgroundColor: [
-                                        '#FA2400',
-                                        '#C80BD6',
-                                        '#1F18ED',
-                                        '#0BB4D6',
-                                        '#0CFA48',
-                                        '#FA9300',
-                                        '#D60B59',
-                                        '#0BD6A5',
-                                        '#B9FA0C',
-                                        '#FAE300',
-                                        '#0BD672',
-                                        '#D60E0B',
+                                        '#009036',
+                                        '#009790',
+                                        '#009EE0',
+                                        '#006AB3',
+                                        '#172983',
+                                        '#93117E',
+                                        '#E2007A',
+                                        '#E3004F',
+                                        '#E2001A',
+                                        '#F29400',
+                                        '#FFED00',
+                                        '#96BF0D',
                                         '#FAC10C',
                                         '#C5FA00',
                                         '#0BD6A0',
@@ -227,7 +239,7 @@ unset($bdd);
                                         '#FA9601',
                                         '#FA7800',
                                     ],
-                                    hoverOffset: 50
+                                    hoverOffset: 25
                                 }]
                             };
 
@@ -249,18 +261,110 @@ unset($bdd);
                     <!-- Grid en bas a gauche -->
                     <div class="three">
                         <form action="Account.php" method="POST">
-                            <input type="submit" value="Se déconnecter" name="Se_deconnecter">
+                            <div id="container_info_sur_cli">
+                                <!-- <?= var_dump($identifiant48[0]) ?> -->
+
+                                <!-- on donne les informations que l'on a sur le client -->
+                                <p>
+                                    Votre n° : <?php if ($identifiant48[0]->numero == "") {
+                                                    echo "incomplet";
+                                                } else {
+                                                    echo $identifiant48[0]->numero;
+                                                }
+                                                ?> <br><br>
+                                </p>
+                                <p>
+                                    Votre date de naissance : <br> <?php if ($identifiant48[0]->date == "") {
+                                                                        echo "incomplet";
+                                                                    } else {
+                                                                        echo $identifiant48[0]->date;
+                                                                    }
+                                                                    ?><br><br>
+                                </p>
+                                <p>
+                                    Votre lieu d'habitation : <?php if ($identifiant48[0]->pays == "") {
+                                                                    echo "incomplet";
+                                                                } else {
+                                                                    echo $identifiant48[0]->pays;
+                                                                }
+                                                                ?><br><br>
+                                </p>
+                                <p>
+                                    nom : <?php if ($identifiant48[0]->nom == "") {
+                                                echo "incomplet";
+                                            } else {
+                                                echo $identifiant48[0]->nom;
+                                            }
+                                            ?><br><br>
+                                </p>
+                                <p>
+                                    prenom : <?php if ($identifiant48[0]->prenom == "") {
+                                                    echo "incomplet";
+                                                } else {
+                                                    echo $identifiant48[0]->prenom;
+                                                }
+                                                ?><br><br>
+                                </p>
+                                <input id="sedeconnecterADM" type="submit" value="Se déconnecter" name="Se_deconnecter">
+                            </div>
                         </form>
                     </div>
                 </div>
 
             <?php } else { ?>
-                <div>
-                    <h2>vous êtes connecté sur le compte : <?php echo $_SESSION['email'] ?></h2>
+                <!-- Grid en haut a gauche -->
+                <div id="one">
+                    <div>
+                        <h2>Vous êtes connecté sur le compte utilisateur : <?php echo $_SESSION['email'] ?></h2>
+                    </div>
                 </div>
-                <form action="Account.php" method="POST">
-                    <input type="submit" value="Se déconnecter" name="Se_deconnecter">
-                </form>
+
+                <!-- les information sur l'utilisateur -->
+                <div id="container_users">
+                    <p>
+                        Votre n° : <?php if ($identifiant48[0]->numero == "") {
+                                        echo "incomplet";
+                                    } else {
+                                        echo $identifiant48[0]->numero;
+                                    }
+                                    ?> <br><br>
+                    </p>
+                    <p>
+                        Votre date de naissance : <br> <?php if ($identifiant48[0]->date == "") {
+                                                            echo "incomplet";
+                                                        } else {
+                                                            echo $identifiant48[0]->date;
+                                                        }
+                                                        ?><br><br>
+                    </p>
+                    <p>
+                        Votre lieu d'habitation : <?php if ($identifiant48[0]->pays == "") {
+                                                        echo "incomplet";
+                                                    } else {
+                                                        echo $identifiant48[0]->pays;
+                                                    }
+                                                    ?><br><br>
+                    </p>
+                    <p>
+                        nom : <?php if ($identifiant48[0]->nom == "") {
+                                    echo "incomplet";
+                                } else {
+                                    echo $identifiant48[0]->nom;
+                                }
+                                ?><br><br>
+                    </p>
+                    <p>
+                        prenom : <?php if ($identifiant48[0]->prenom == "") {
+                                        echo "incomplet";
+                                    } else {
+                                        echo $identifiant48[0]->prenom;
+                                    }
+                                    ?><br><br>
+                    </p>
+                    <form action="Account.php" method="POST">
+                        <input type="submit" value="Se déconnecter" name="Se_deconnecter">
+                    </form>
+                </div>
             <?php } ?>
 
 
