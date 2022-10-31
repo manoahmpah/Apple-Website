@@ -201,3 +201,17 @@
     margin-top: 1%;
     font-family: 'Roboto', sans-serif;
 }
+
+#container_users {
+    width: 44%;
+    margin: auto;
+    margin-top: 0.5%;
+    border: 1px black solid;
+    border-radius: 7px;
+    padding: 5%;
+}
+
+#container_users p {
+    width: 30%;
+    margin: auto;
+}

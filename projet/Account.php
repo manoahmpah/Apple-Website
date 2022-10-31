@@ -362,7 +362,7 @@ unset($bdd);
                                     ?><br><br>
                     </p>
                     <form action="Account.php" method="POST">
-                        <input type="submit" value="Se déconnecter" name="Se_deconnecter">
+                        <input id="sedeconnecterADM" type="submit" value="Se déconnecter" name="Se_deconnecter">
                     </form>
                 </div>
             <?php } ?>
