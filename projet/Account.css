@@ -150,3 +150,18 @@
     grid-row: 2 / 7;
     border-radius: 20px;
 }
+
+#boutton_Se_connecter {
+    background-color: white;
+    border: none;
+    transform: translate(740%, -180%);
+    cursor: pointer;
+
+}
+
+#nbr_utilisateur {
+    width: fit-content;
+    margin: auto;
+    transform: translateY(25%);
+    font-family: 'Roboto', sans-serif;
+}

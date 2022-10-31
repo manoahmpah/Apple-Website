@@ -20,7 +20,7 @@ session_start();
 	<?php require 'header.php' ?>
 
 	</div>
-
+	<!-- traitement du formulaire  -->
 	<?php
 	if (isset($_POST['Inscription'])) {
 		$nom = $_POST['nom'];
@@ -38,11 +38,13 @@ session_start();
 		$req = $bdd->exec($sql);
 		unset($bdd);
 
-		header("Location:index.php");
+		header("Location:Account.php");
 	} else {
 	?>
+
 		<div id="container_inscription">
 			<legend>Créer votre identifiant Apple</legend>
+			<!-- formullaire d'inscription -->
 			<form method="POST" action="inscription.php">
 				<p>
 					<label for="nom">
@@ -101,9 +103,10 @@ session_start();
 
 				<p>
 					<label for="phone">
+						<!-- format: 1234567890 -->
 						<input type="tel" class="form-input" name="phone" placeholder="0123456789" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
 					</label>
-					<!-- format: 12 34 56 78 90 -->
+
 				</p>
 
 				<br><input id="Button_inscription" type="submit" name="Inscription" value="Continuer">

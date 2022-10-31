@@ -2,6 +2,10 @@
 session_start();
 
 require_once('sys/connexion.php');
+// Pour savoir le nombre d'utilisateurs
+$sql78 = 'SELECT * FROM identifiant';
+$results = $bdd->query($sql78);
+$identifiant78 = $results->fetchAll(PDO::FETCH_OBJ);
 
 // donnée pour la France
 $sql = 'SELECT COUNT(*) AS FRANCE FROM identifiant WHERE pays = "France"';
@@ -115,7 +119,7 @@ unset($bdd);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css -->
-    <link rel="stylesheet" href="Account(0).css">
+    <link rel="stylesheet" href="Account.css">
     <title>Apple (France)</title>
 </head>
 
@@ -149,6 +153,7 @@ unset($bdd);
                     <!-- Grid a droite -->
                     <div class="two">
                         <div>
+                            <p id="nbr_utilisateur">En tout il y a <?php echo COUNT($identifiant78) ?> utilisateur(s)</p>
                             <canvas id="myChart"></canvas>
                         </div>
 
@@ -294,7 +299,7 @@ unset($bdd);
                         <input type="Password" name="mdp" id="mdp" placeholder="Mot de Passe">
                     </label>
 
-                    <br><input type="submit" name="Se_connecter" value="Se connecter">
+                    <br><input id="boutton_Se_connecter" type="submit" name="Se_connecter" value="✅">
                 </form>
 
 
