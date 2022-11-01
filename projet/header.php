@@ -35,7 +35,7 @@
             AirPods
         </a>
 
-        <a href="">
+        <a href="./panier.php">
             <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
         </a>
 

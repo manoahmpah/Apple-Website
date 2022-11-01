@@ -57,3 +57,13 @@ canvas {
 .img_dd {
     transform: translateX(100%);
 }
+
+.Bouton_buy {
+    background-color: royalblue;
+    color: white;
+    border: none;
+    padding: 2%;
+    border-radius: 7px;
+    font-weight: bold;
+
+}

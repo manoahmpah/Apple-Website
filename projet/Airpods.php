@@ -53,6 +53,10 @@ unset($bdd);
                 <p>
                     <?php echo $produits[0]->details ?>
                 </p>
+
+                <form action="./panier.php" method="post">
+                    <input class="Bouton_buy" name="achat_AirPods2" type="submit" value="Mettre dans le panier">
+                </form>
             </div>
         </div>
         <div class="grid">
