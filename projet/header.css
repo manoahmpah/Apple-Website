@@ -8,7 +8,9 @@ body {
     width: 99%;
     background: rgba(0, 0, 0, 0.8);
     padding: 0.5%;
+    position: fixed;
     display: flex;
+    top: 0;
     align-items: center;
     justify-content: center;
 

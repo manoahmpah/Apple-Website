@@ -238,7 +238,6 @@ unset($bdd);
 
     </section>
 </body>
-<script src="app.js"></script>
 
 
 

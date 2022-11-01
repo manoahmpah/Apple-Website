@@ -1,0 +1,19 @@
+body {
+    height: 500vh;
+    background-color: black;
+}
+
+canvas {
+    margin-top: 0px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100vw;
+    max-height: 100vh;
+}
+
+#hello {
+    margin-top: 2500px;
+    color: white;
+}
