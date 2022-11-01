@@ -131,7 +131,7 @@ unset($bdd);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css -->
-    <link rel="stylesheet" href="Account.css">
+    <link rel="stylesheet" href="Account(1).css">
     <title>Apple (France)</title>
 </head>
 
@@ -313,58 +313,61 @@ unset($bdd);
 
             <?php } else { ?>
                 <!-- Grid en haut a gauche -->
-                <div id="one">
-                    <div>
-                        <h2>Vous êtes connecté sur le compte utilisateur : <?php echo $_SESSION['email'] ?></h2>
+                <section id="container_all_users">
+                    <div id="one">
+                        <div>
+                            <h2>Vous êtes connecté sur le compte utilisateur : <?php echo $_SESSION['email'] ?></h2>
+                        </div>
                     </div>
-                </div>
 
-                <!-- les information sur l'utilisateur -->
-                <div id="container_users">
-                    <p>
-                        Votre n° : <?php if ($identifiant48[0]->numero == "") {
-                                        echo "incomplet";
-                                    } else {
-                                        echo $identifiant48[0]->numero;
-                                    }
-                                    ?> <br><br>
-                    </p>
-                    <p>
-                        Votre date de naissance : <br> <?php if ($identifiant48[0]->date == "") {
+                    <!-- les information sur l'utilisateur -->
+                    <div id="container_users">
+                        <p>
+                            Votre n° : <?php if ($identifiant48[0]->numero == "") {
+                                            echo "incomplet";
+                                        } else {
+                                            echo $identifiant48[0]->numero;
+                                        }
+                                        ?> <br><br>
+                        </p>
+                        <p>
+                            Votre date de naissance : <br> <?php if ($identifiant48[0]->date == "") {
+                                                                echo "incomplet";
+                                                            } else {
+                                                                echo $identifiant48[0]->date;
+                                                            }
+                                                            ?><br><br>
+                        </p>
+                        <p>
+                            Votre lieu d'habitation : <?php if ($identifiant48[0]->pays == "") {
                                                             echo "incomplet";
                                                         } else {
-                                                            echo $identifiant48[0]->date;
+                                                            echo $identifiant48[0]->pays;
                                                         }
                                                         ?><br><br>
-                    </p>
-                    <p>
-                        Votre lieu d'habitation : <?php if ($identifiant48[0]->pays == "") {
-                                                        echo "incomplet";
-                                                    } else {
-                                                        echo $identifiant48[0]->pays;
-                                                    }
-                                                    ?><br><br>
-                    </p>
-                    <p>
-                        nom : <?php if ($identifiant48[0]->nom == "") {
-                                    echo "incomplet";
-                                } else {
-                                    echo $identifiant48[0]->nom;
-                                }
-                                ?><br><br>
-                    </p>
-                    <p>
-                        prenom : <?php if ($identifiant48[0]->prenom == "") {
+                        </p>
+                        <p>
+                            nom : <?php if ($identifiant48[0]->nom == "") {
                                         echo "incomplet";
                                     } else {
-                                        echo $identifiant48[0]->prenom;
+                                        echo $identifiant48[0]->nom;
                                     }
                                     ?><br><br>
-                    </p>
-                    <form action="Account.php" method="POST">
-                        <input id="sedeconnecterADM" type="submit" value="Se déconnecter" name="Se_deconnecter">
-                    </form>
-                </div>
+                        </p>
+                        <p>
+                            prenom : <?php if ($identifiant48[0]->prenom == "") {
+                                            echo "incomplet";
+                                        } else {
+                                            echo $identifiant48[0]->prenom;
+                                        }
+                                        ?><br><br>
+                        </p>
+                        <form action="Account.php" method="POST">
+                            <input id="sedeconnecterADM" type="submit" value="Se déconnecter" name="Se_deconnecter">
+                        </form>
+                    </div>
+                </section>
+
             <?php } ?>
 
 

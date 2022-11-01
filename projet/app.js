@@ -38,24 +38,7 @@ window.addEventListener('scroll', () => {
     console.log(scrollFraction);
 
     // fonction qui permet de changer le css quand on est arrivé à la fin de l'animation
-    function end(scrollFraction) {
-        if (scrollFraction >= 1) {
 
-            document.querySelector("#hero-lightpass").style.position = "relative";
-            document.querySelector("#hero-lightpass").style.top = "50%";
-            document.querySelector("#hero-lightpass").style.transform = "translate(-50%, 10%)";
-            document.querySelector("#hello").style.color = "white";
-
-        } else {
-            document.querySelector("#hero-lightpass").style.position = "fixed";
-            document.querySelector("#hero-lightpass").style.top = "50%";
-            document.querySelector("#hero-lightpass").style.transform = "translate(-50%, -50%)";
-
-            document.querySelector("#hello").style.color = "black";
-
-        }
-    }
-    end(scrollFraction);
     const frameIndex = Math.min(
         frameCount - 1,
         Math.ceil(scrollFraction * frameCount)
