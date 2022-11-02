@@ -48,11 +48,11 @@ session_start();
 			<form method="POST" action="inscription.php">
 				<p>
 					<label for="nom">
-						<input class="form-input_nom_prenom" type="text" name="nom" value="" placeholder="nom">
+						<input class="form-input_nom_prenom" type="text" name="nom" value="" placeholder="nom" required>
 					</label>
 
 					<label for="prenom">
-						<input class="form-input_nom_prenom" id="prenom" type="text" name="prenom" value="" placeholder="prenom">
+						<input class="form-input_nom_prenom" id="prenom" type="text" name="prenom" value="" placeholder="prenom" required>
 					</label>
 				</p>
 
@@ -60,7 +60,7 @@ session_start();
 					PAYS / RÉGION <br>
 					<!--* Si il y a ajout ou suppression d'un pays il faut ajouter/supprimer la requete dans Account.php
 						* ajouter ou supprimer les infos qui rendre dans le donuts (Grid:2) dans Account.php -->
-					<select class="form-input" name="pays">
+					<select class="form-input" name="pays" required>
 						<option value="Afghanistan">Afghanistan</option>
 						<option value="Allemagne">Allemagne</option>
 						<option value="Angleterre">Angleterre</option>
@@ -84,20 +84,20 @@ session_start();
 
 				<p>
 					<label for="date_de_naissance">
-						<input class="form-input" type="date" name="date_de_naissance" value="">
+						<input class="form-input" type="date" name="date_de_naissance" value="" required>
 					</label>
 				</p>
 
 				<p>
 					<label for="email">
-						<input class="form-input" type="email" name="email" value="" placeholder="nom@example.com">
+						<input class="form-input" type="email" name="email" value="" placeholder="nom@example.com" required>
 					</label>
 				</p>
 
 				<p>
 
 					<label for="mdp">
-						<input class="form-input" id="mdp" type="Password" name="mdp" value="" placeholder="mot de passe">
+						<input class="form-input" id="mdp" type="Password" name="mdp" value="" placeholder="mot de passe" required>
 					</label>
 				</p>
 
