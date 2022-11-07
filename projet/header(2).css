@@ -9,10 +9,12 @@ body {
     background: rgba(0, 0, 0, 0.8);
     padding: 0.5%;
     position: fixed;
+    text-align: center;
     display: flex;
     top: 0;
     align-items: center;
     justify-content: center;
+    z-index: 1000;
 
 }
 
@@ -31,4 +33,9 @@ body {
 
 #icon_header {
     padding-left: 0px;
+}
+
+#account_icone {
+    border: #f5f5f7 solid 1px;
+    border-radius: 50%;
 }

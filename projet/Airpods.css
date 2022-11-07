@@ -1,5 +1,10 @@
 body {
     background-color: black;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 canvas {
@@ -146,4 +151,42 @@ canvas {
 .position_the_boutton_AirPods2 {
     transform: translate(-1%, -50%);
     font-size: 1.2vw;
+}
+
+
+/* AirPods Max */
+#container_AirPods_Max {
+    text-align: center;
+    transform: translateY(32%);
+}
+
+#container_AirPods_Max_All {
+    margin-top: 30%;
+    background-color: white;
+    margin: 15%;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#container_AirPods_Max img:nth-child(3) {
+    transform: translateY(-65%);
+}
+
+#container_AirPods_Max img:nth-child(1) {
+    width: 90%;
+}
+
+#container_AirPods_Max p:nth-child(2) {
+    font-size: 1vw;
+    font-weight: 700;
+}
+
+#prix_AirPods_MAX {
+    text-align: center;
+    transform: translateY(-1500%);
+}
+
+#container_btn_AirPods_MAX {
+    transform: translate(45%, -800%);
+    font-family: 'Roboto', sans-serif;
 }

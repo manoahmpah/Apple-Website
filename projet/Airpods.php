@@ -43,7 +43,7 @@ unset($bdd);
         </div>
     </section>
 
-
+    <!-- section AirPods 3 -->
     <section class="hello_world">
         <div class="container_AirPods3">
             <div>
@@ -66,6 +66,8 @@ unset($bdd);
             </div>
         </div>
     </section>
+
+    <!-- section Airpods 2 -->
     <section class="hello_world">
         <div class="container_AirPods2">
             <div>
@@ -81,12 +83,34 @@ unset($bdd);
                     <img id="AirPods2" src="./img/AirPods2/MV7N2_AV1.jpg" alt="">
                     <div class="position_the_boutton_AirPods2">
                         <form action="./panier.php" method="post">
-                            <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"></a>
+                            <a href=""><input class="Bouton_buy" name="<?php echo $produits[0]->Id_produit ?>" type="submit" value="Buy"></a>
                             <a class="Learn_more_btn" href="">Learn more </a>
                         </form>
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+
+    <!-- section AirPods MAX -->
+    <section class="hello_word">
+        <div id="container_AirPods_Max_All">
+            <div id="container_AirPods_Max">
+                <img src="https://www.apple.com/v/airpods/s/images/overview/airpods_max_logo__bdgdixidcqcy_large.jpg" alt="">
+                <p>$<?php echo $produits[2]->prix ?></p>
+                <img src="https://www.apple.com/v/airpods/s/images/overview/airpods_max__f265q4g4ddym_large.png" alt="">
+            </div>
+
+        </div>
+
+        <div>
+            <div id="container_btn_AirPods_MAX">
+                <form action="./panier.php" method="post">
+                    <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"></a>
+                    <a class="Learn_more_btn" href="">Learn more </a>
+                </form>
             </div>
         </div>
     </section>
