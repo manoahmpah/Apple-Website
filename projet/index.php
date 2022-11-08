@@ -123,7 +123,6 @@ unset($bdd);
             }
             ?> -->
 
-
     <!-- deuxieme section -->
     <section class="iphone14_frontpage">
         <a href="">
@@ -141,7 +140,7 @@ unset($bdd);
             </div>
 
             <div id="iphone14Pro_container">
-                <img src="https://www.apple.com/v/iphone-14-pro/a/images/overview/hero/hero_iphone_14_pro__kzr001ge0262_large.jpg" alt="">
+                <img src="https://www.apple.com/v/iphone/home/bk/images/overview/hero/iphone_14_pro_hero__e4ivycyx40k2_large.jpg" alt="">
             </div>
         </a>
     </section>
