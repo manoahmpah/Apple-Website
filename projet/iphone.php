@@ -28,7 +28,7 @@ unset($bdd);
     <link rel="icon" type="image/png" sizes="16x16" href="./img/icons8-mac-os-30.png">
 
     <!-- css -->
-    <link rel="stylesheet" href="iphone.css">
+    <link rel="stylesheet" href="iphone(2).css">
     <title>Apple (France)</title>
 
     <!-- google fonts -->
@@ -50,7 +50,7 @@ unset($bdd);
         <!-- texte -->
         <div id="new_iphone_title_and_information">
             <h5>New</h5>
-            <?php echo $produits[4]->nom_produit ?>
+            <h4><?php echo $produits[4]->nom_produit ?></h4>
             <h2>Big and bigger.</h2>
             <!-- <?php echo var_dump($produits) ?> -->
             <p>From $<?php echo $produits[4]->prix ?></p>
