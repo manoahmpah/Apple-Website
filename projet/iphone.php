@@ -28,7 +28,7 @@ unset($bdd);
     <link rel="icon" type="image/png" sizes="16x16" href="./img/icons8-mac-os-30.png">
 
     <!-- css -->
-    <link rel="stylesheet" href="iphone(2).css">
+    <link rel="stylesheet" href="iphone(1).css">
     <title>Apple (France)</title>
 
     <!-- google fonts -->
@@ -73,12 +73,47 @@ unset($bdd);
                 <h5>New</h5>
                 <?php echo $produits[4]->nom_produit ?>
                 <h2>Pro. Beyond.</h2>
+                <p>From $<?php echo $produits[4]->prix ?></p>
+                <div class="link_iphone14pro_frontpage">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </div>
             </div>
             <div>
                 <img src="https://www.apple.com/v/iphone/home/bk/images/overview/hero/iphone_14_pro_hero__e4ivycyx40k2_large.jpg" alt="">
             </div>
         </div>
 
+    </section>
+    <section class="grid">
+        <div>
+            <img src="https://www.apple.com/v/iphone/home/bk/images/overview/hero/iphone_se_logo__ii1n5sjcmci2_large.jpg" alt="">
+            <h3>Love the power. <br> Love the price.</h3>
+            <p>From $<?php echo $produits[5]->prix ?></p>
+            <div class="link_iphone14pro_frontpage">
+                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+            </div>
+        </div>
+        <div>
+            <img src="https://www.apple.com/v/iphone/home/bk/images/overview/hero/iphone_se_hero__gd586pazxqqa_large.jpg" alt="">
+        </div>
+    </section>
+    <section>
+        <div class="container_3eme_section">
+            <div>
+                <figure>
+                    <div class="container_div_titre">
+                        <h1>
+                            A Guided Tour of <br>
+                            iPhone 14 & <br>
+                            iPhone 14 Pro
+                        </h1>
+                    </div>
+                </figure>
+            </div>
+
+        </div>
     </section>
 </body>
 
