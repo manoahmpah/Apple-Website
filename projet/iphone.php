@@ -131,6 +131,7 @@ unset($bdd);
             </div>
         </div>
     </section>
+    <?php require 'footer.php' ?>
 </body>
 
 </html>

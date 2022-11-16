@@ -118,7 +118,7 @@ session_start();
 		<?php
 	}
 		?>
-
+		<?php require 'footer.php' ?>
 </body>
 
 </html>

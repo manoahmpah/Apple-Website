@@ -1,0 +1,21 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+
+footer {
+    background-color: #121212;
+    display: flex;
+    padding: 10px;
+    color: #fff;
+    border: 0px;
+    border-style: solid;
+    border-color: white;
+}
+
+footer p {
+    text-align: center;
+    width: 100%;
+}

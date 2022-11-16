@@ -236,7 +236,9 @@ unset($bdd);
 
 
     </section>
-</body>container_all_users
+
+    <?php require 'footer.php' ?>
+</body>
 
 
 

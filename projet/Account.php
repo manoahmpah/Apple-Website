@@ -169,7 +169,7 @@ unset($bdd);
                             <canvas id="myChart"></canvas>
                         </div>
 
-                        <!-- Scripte qui permet de mettre un diagramme -->
+                        <!-- Scripte qui permet de mettre un diagramme avec la library chart.js-->
                         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
                         <script>
                             const labels = [
@@ -413,6 +413,7 @@ unset($bdd);
                 <p>Pas d’identifiant Apple ? <a href="./inscription.php">Créez le vôtre dès à présent. <img src="https://img.icons8.com/android/20/4169e1/circled-up-right-2.png" /></a></p>
             </div>
         </section>
+
 </body>
 
 <?php } ?>

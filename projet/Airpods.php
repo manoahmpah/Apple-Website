@@ -118,7 +118,7 @@ unset($bdd);
         </div>
     </section>
 
-
+    <?php require 'footer.php' ?>
     <script src="./app.js"></script>
 </body>
 
