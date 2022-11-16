@@ -28,7 +28,7 @@ unset($bdd);
     <link rel="icon" type="image/png" sizes="16x16" href="./img/icons8-mac-os-30.png">
 
     <!-- css -->
-    <link rel="stylesheet" href="iphone(1).css">
+    <link rel="stylesheet" href="iphone.css">
     <title>Apple (France)</title>
 
     <!-- google fonts -->
@@ -101,18 +101,34 @@ unset($bdd);
     </section>
     <section>
         <div class="container_3eme_section">
+
             <div>
-                <figure>
-                    <div class="container_div_titre">
-                        <h1>
-                            A Guided Tour of <br>
-                            iPhone 14 & <br>
-                            iPhone 14 Pro
-                        </h1>
-                    </div>
-                </figure>
+                <h2>
+                    A Guided Tour of <br>
+                </h2>
+                <h1>
+                    iPhone 14 & <br>
+                    iPhone 14 Pro
+                </h1>
+                <a href="">Watch the film</a>
             </div>
 
+            <div>
+                <img src="https://www.apple.com/v/iphone/home/bk/images/overview/subhero/guided_tour__c40f88on9o8y_large.jpg" alt="">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="container_give_away">
+        <div class="bgc-give-away">
+            <div>
+                <img src="https://www.apple.com/v/iphone/home/bk/images/overview/holiday-2022/hol_apple_logo_familypage__df0ndrjoraaa_large.jpg" alt="">
+                <h1>Give WOW.</h1>
+            </div>
+            <div>
+                <img src="https://www.apple.com/v/iphone/home/bk/images/overview/holiday-2022/hol_iphone_familypage_banner__bbwv7ld9rp6q_large.jpg" alt="">
+            </div>
         </div>
     </section>
 </body>

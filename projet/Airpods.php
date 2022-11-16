@@ -58,6 +58,7 @@ unset($bdd);
                 <div class="position_the_boutton">
                     <form action="./panier.php" method="post">
                         <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"></a>
+                        <input type="hidden" name="Airpods_3" value="<?php echo $produits[1]->Id_produit ?>">
                         <a class="Learn_more_btn" href="">Learn more </a>
                     </form>
 
@@ -84,6 +85,7 @@ unset($bdd);
                     <div class="position_the_boutton_AirPods2">
                         <form action="./panier.php" method="post">
                             <a href=""><input class="Bouton_buy" name="<?php echo $produits[0]->Id_produit ?>" type="submit" value="Buy"></a>
+                            <input type="hidden" name="Airpods_2" value="<?php echo $produits[0]->Id_produit ?>">
                             <a class="Learn_more_btn" href="">Learn more </a>
                         </form>
                     </div>
@@ -108,7 +110,8 @@ unset($bdd);
         <div>
             <div id="container_btn_AirPods_MAX">
                 <form action="./panier.php" method="post">
-                    <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"></a>
+                    <a href=""><input class="Bouton_buy" name="<?php echo $produits[2]->Id_produit ?>" type="submit" value="Buy"></a>
+                    <input type="hidden" name="AirPodMax" value="<?php echo $produits[2]->Id_produit ?>">
                     <a class="Learn_more_btn" href="">Learn more </a>
                 </form>
             </div>
