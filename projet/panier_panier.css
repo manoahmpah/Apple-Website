@@ -1,0 +1,12 @@
+#owerflow_texte {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#paniercli {
+    border: black 1px solid;
+    margin: 1%;
+    border-radius: 20px;
+
+}

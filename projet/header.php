@@ -13,6 +13,8 @@
 
 <body>
 
+
+
     <!-- le header qui va être dupliqué sur tous les pages -->
     <header id="header">
         <a href="./index.php">
@@ -35,7 +37,7 @@
             AirPods
         </a>
 
-        <a href="./panier.php">
+        <a href="./panier_panier.php">
             <img src="https://img.icons8.com/fluency-systems-regular/24/FFFFFF/shopping-bag--v1.png" />
         </a>
 

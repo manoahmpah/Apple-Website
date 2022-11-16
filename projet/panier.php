@@ -9,48 +9,22 @@ session_start();
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="panier.css">
+
+
+    <title>Apple (France)</title>
 </head>
 
 <body>
-
+    <?php require 'header.php' ?>
     <section>
 
         <!-- partie serveur -->
         <?php
-        // if (isset($_POST['1'])) {
-        //     $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
-        //     $sql = "SELECT * FROM identifiant WHERE email= '{$_SESSION['email']}' ";
-        //     $results = $bdd->query($sql);
-        //     $produits = $results->fetchAll(PDO::FETCH_OBJ);
-        //     $sql = "INSERT INTO panier(Id_id, Id_produit) VALUES( {$produits[0]->Id_id} ,  1) ";
-        //     $req = $bdd->exec($sql);
-        //     unset($bdd);
-        // } elseif (isset($_POST['2'])) {
-        //     $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
-        //     $sql = "SELECT * FROM identifiant WHERE email= '{$_SESSION['email']}' ";
-        //     $results = $bdd->query($sql);
-        //     $produits = $results->fetchAll(PDO::FETCH_OBJ);
-        //     $sql = "INSERT INTO panier(Id_id, Id_produit) VALUES( {$produits[0]->Id_id} ,  2) ";
-        //     $req = $bdd->exec($sql);
-        //     unset($bdd);
-        // } elseif ($_POST['3']) {
-        //     $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
-        //     $sql = "SELECT * FROM identifiant WHERE email= '{$_SESSION['email']}' ";
-        //     $results = $bdd->query($sql);
-        //     $produits = $results->fetchAll(PDO::FETCH_OBJ);
-        //     $sql = "INSERT INTO panier(Id_id, Id_produit) VALUES( {$produits[0]->Id_id} ,  3) ";
-        //     $req = $bdd->exec($sql);
-        //     unset($bdd);
-        // } elseif ($_POST['4']) {
-        //     $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
-        //     $sql = "SELECT * FROM identifiant WHERE email= '{$_SESSION['email']}' ";
-        //     $results = $bdd->query($sql);
-        //     $produits = $results->fetchAll(PDO::FETCH_OBJ);
-        //     $sql = "INSERT INTO panier(Id_id, Id_produit) VALUES( {$produits[0]->Id_id} ,  4) ";
-        //     $req = $bdd->exec($sql);
-        //     unset($bdd);
-        // }
+
 
         // Quand un utilisateur à appuyer sur le bouton buy de n'importe quelle produit
         if (isset($_POST['AirPodMax'])) {
@@ -95,7 +69,7 @@ session_start();
             $req2 = $bdd->exec($sql14);
             unset($bdd);
 
-            echo var_dump($num);
+            // echo var_dump($num);
 
 
 
@@ -108,7 +82,7 @@ session_start();
             $req2 = $bdd->exec($sql14);
             unset($bdd);
 
-            echo var_dump($total);
+            // echo var_dump($total);
 
 
             if (COUNT($num) == 1) {
@@ -134,21 +108,6 @@ session_start();
             $rec_produit = $results->fetchAll(PDO::FETCH_OBJ);
             $req2 = $bdd->exec($sql);
             unset($bdd);
-
-            // echo var_dump($rec_produit);
-
-            // nombre de fois 
-
-
-
-            //Aficher ce que l'utilisateur aurait acheter
-            // foreach ($rec_produit as $rp) {
-            //     echo "<li> $rp->nom_produit</li>";
-            //     echo "<li> $rp->type_produit</li>";
-            //     echo "<li> $rp->details</li>";
-            //     echo "<li> $rp->prix</li>";
-            //     echo "<li> </li>";
-            // }
         };
 
 
@@ -157,15 +116,55 @@ session_start();
 
 
 
-        // foreach ($panier as $p) {
-        //     echo "<li> $p->Id_id</li>";
-        // }
+        // recuperation des des nom des produit grace au panier avec un JOIN ON
+        require_once('sys/connexion.php');
+        //On stocke notre requête dans une variable sql
+        $sql = "SELECT nom_produit, details, prix, total FROM panier JOIN produit ON panier.Id_produit=produit.Id_produit WHERE Id_id = {$produits[0]->Id_id}";
+        //On envoie la requête à la base de données et on stock les résultats dans $results
+        $results = $bdd->query($sql);
+        //On transforme les résultats en un tableau associatif compréhensible par PHP
+        $produits = $results->fetchAll(PDO::FETCH_OBJ);
+        //Déconnexion de la base de données
+        unset($bdd);
 
-        // echo $_POST['AirPodMax'];
 
 
-        // 
+
+        foreach ($produits as $p) {
         ?>
+            <section id="paniercli">
+                <div>
+                    <img src="" alt="">
+                </div>
+                <div>
+                    <h2>
+                        <?php echo $p->nom_produit ?>
+                    </h2>
+                </div>
+                <div>
+                    <p>
+                        <?php echo $p->details ?>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        $ <?php echo $p->prix ?>
+                    </p>
+                </div>
+
+                <div>
+                    <p>
+                        <?php echo $p->total ?>
+                    </p>
+                </div>
+            </section>
+
+        <?php
+        }
+        ?>
+
+
 
 
 
