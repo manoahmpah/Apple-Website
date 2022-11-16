@@ -151,7 +151,7 @@ unset($bdd);
 
             <!-- si le compte admin est connecté, il aura acces à plein d'informations que des simples utilisateurs n'aurrons pas -->
             <?php
-            if ($_SESSION['email'] == "mpahmanoah@apple.com") { ?>
+            if ($_SESSION['email'] == "mpahmanoah@apple.com" or $_SESSION['email'] == "therentylogan@apple.com") { ?>
 
                 <div class="wrapper">
 

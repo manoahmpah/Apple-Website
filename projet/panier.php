@@ -71,6 +71,10 @@ session_start();
             $produits = $results->fetchAll(PDO::FETCH_OBJ);
             $req = $bdd->exec($sql);
 
+
+            // dans cette page produit sera le cli
+
+
             // on recupere l'Id de l'utilisateur
             $Id_utilisateur = $produits[0]->Id_id;
 
@@ -85,23 +89,43 @@ session_start();
 
 
             $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
-            $sql14 = "SELECT * FROM panier WHERE Id_id= '{$produits[0]->Id_id}' ";
+            $sql14 = "SELECT * FROM panier WHERE Id_id= '{$produits[0]->Id_id}' AND Id_produit = $buy";
             $results = $bdd->query($sql14);
             $num = $results->fetchAll(PDO::FETCH_OBJ);
             $req2 = $bdd->exec($sql14);
             unset($bdd);
 
+            echo var_dump($num);
+
+
+
+            // si le produit et deja dans le panier de l'utilisateur 
+
+            $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
+            $sql14 = "SELECT total FROM panier WHERE Id_id= '{$produits[0]->Id_id}' AND Id_produit = $buy ";
+            $results = $bdd->query($sql14);
+            $total = $results->fetchAll(PDO::FETCH_OBJ);
+            $req2 = $bdd->exec($sql14);
+            unset($bdd);
+
+            echo var_dump($total);
+
+
             if (COUNT($num) == 1) {
-                echo "congrat";
+                // ajouter au total 1 quand le produit et dans le panier du user 
+                $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
+                $sql1 = "UPDATE panier SET total = {$total[0]->total}+1 WHERE Id_id= {$produits[0]->Id_id} AND Id_produit=$buy";
+                $req1 = $bdd->exec($sql1);
+                unset($bdd);
             } else {
                 // Ajoute à la base de donnée les informations sur le produit choisi
                 $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
-                $sql1 = "INSERT INTO panier(Id_id, Id_produit) VALUES( '{$produits[0]->Id_id}', '$buy' )";
+                $sql1 = "INSERT INTO panier(total, Id_id, Id_produit) VALUES( 1,'{$produits[0]->Id_id}', '$buy' )";
                 $req1 = $bdd->exec($sql1);
                 unset($bdd);
             };
 
-
+            // echo var_dump($total);
 
             // recupere les produits pour avoir les détails
             $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
@@ -122,8 +146,8 @@ session_start();
             //     echo "<li> $rp->nom_produit</li>";
             //     echo "<li> $rp->type_produit</li>";
             //     echo "<li> $rp->details</li>";
-            //     echo "<li> $rp->prix   </li>";
-            //     echo "<li>    </li>";
+            //     echo "<li> $rp->prix</li>";
+            //     echo "<li> </li>";
             // }
         };
 

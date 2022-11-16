@@ -22,6 +22,9 @@ session_start();
 	</div>
 	<!-- traitement du formulaire  -->
 	<?php
+	// if ($_POST['email'] == "mpahmanoah@apple.com" or $_POST['email'] == "therentylogan@apple.com") {
+	// 	echo "vous ne pouvez pas utiliser cette adresse email";
+	// } 
 	if (isset($_POST['Inscription'])) {
 		$nom = $_POST['nom'];
 		$prenom = $_POST['prenom'];
@@ -118,7 +121,7 @@ session_start();
 		<?php
 	}
 		?>
-		<?php require 'footer.php' ?>
+
 </body>
 
 </html>
