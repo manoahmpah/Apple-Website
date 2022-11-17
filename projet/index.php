@@ -135,8 +135,11 @@ unset($bdd);
             <p>Pro. Beyond.</p>
 
             <div class="link_iphone14pro_frontpage">
-                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                <form action="./panier.php" method="POST">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <input type="hidden" name="Iphone_14" value="<?php echo $produits[4]->Id_produit ?>">
+                    <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"><img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </form>
             </div>
 
             <div id="iphone14Pro_container">
@@ -156,8 +159,11 @@ unset($bdd);
                         <?php echo $produits[4]->nom_produit ?>
                     </h2>
                     <div class="link_iphone14pro_frontpage">
-                        <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-                        <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                        <form action="./panier.php" method="POST">
+                            <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                            <input type="hidden" name="Iphone_14" value="<?php echo $produits[4]->Id_produit ?>">
+                            <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"><img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                        </form>
                     </div>
                     <div id="iphone14-s2-div1-div2">
                         <img src="https://www.apple.com/v/home/au/images/promos/iphone-14/promo_iphone14__b9mz75yhy02u_large.jpg" alt="">

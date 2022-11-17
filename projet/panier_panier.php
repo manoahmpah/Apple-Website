@@ -76,7 +76,7 @@ session_start();
 
                         <b>
                             <p>
-                                <?php echo $p->total ?>
+                                quantite : <?php echo $p->total ?>
                             </p>
                         </b>
                     </div>
@@ -85,7 +85,7 @@ session_start();
                 }
                 ?>
                 <div>
-                    <h1>prize</h1>
+
                 </div>
             <?php
         } else { ?>
