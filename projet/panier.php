@@ -13,6 +13,7 @@ session_start();
 
     <!-- css -->
     <link rel="stylesheet" href="panier.css">
+    <link rel="stylesheet" href="panier_panier(1).css">
 
 
     <title>Apple (France)</title>
@@ -27,6 +28,7 @@ session_start();
 
 
         // Quand un utilisateur à appuyer sur le bouton buy de n'importe quelle produit
+        // Airpods
         if (isset($_POST['AirPodMax'])) {
             $buy = $_POST['AirPodMax'];
         } elseif (isset($_POST['Airpods_2'])) {
@@ -34,6 +36,13 @@ session_start();
         } elseif (isset($_POST['Airpods_3'])) {
             $buy = $_POST['Airpods_3'];
         }
+        // iphone
+        elseif (isset($_POST['Iphone_SE'])) {
+            $buy = $_POST['Iphone_SE'];
+        } elseif (isset($_POST['Iphone_14'])) {
+            $buy = $_POST['Iphone_14'];
+        }
+        // on peut ajouter les autre ici
 
 
         if (isset($_SESSION['email'])) {
@@ -116,62 +125,85 @@ session_start();
 
 
 
-        // recuperation des des nom des produit grace au panier avec un JOIN ON
-        require_once('sys/connexion.php');
-        //On stocke notre requête dans une variable sql
-        $sql = "SELECT nom_produit, details, prix, total FROM panier JOIN produit ON panier.Id_produit=produit.Id_produit WHERE Id_id = {$produits[0]->Id_id}";
-        //On envoie la requête à la base de données et on stock les résultats dans $results
-        $results = $bdd->query($sql);
-        //On transforme les résultats en un tableau associatif compréhensible par PHP
-        $produits = $results->fetchAll(PDO::FETCH_OBJ);
-        //Déconnexion de la base de données
-        unset($bdd);
+        if (isset($_SESSION['email'])) {
+            // Recupére tout de l'utilisateur qui est connecté a la session
+            $bdd = new PDO('mysql:host=localhost;dbname=apple', 'root', '');
+            $sql = "SELECT * FROM identifiant WHERE email= '{$_SESSION['email']}' ";
+            $results = $bdd->query($sql);
+            $produits = $results->fetchAll(PDO::FETCH_OBJ);
+            $req = $bdd->exec($sql);
+            unset($bdd);
 
 
 
+            require_once('sys/connexion.php');
+            //On stocke notre requête dans une variable sql
+            $sql = "SELECT nom_produit, details, prix, total FROM panier JOIN produit ON panier.Id_produit=produit.Id_produit WHERE Id_id = {$produits[0]->Id_id} ";
+            //On envoie la requête à la base de données et on stock les résultats dans $results
+            $results = $bdd->query($sql);
+            //On transforme les résultats en un tableau associatif compréhensible par PHP
+            $produit = $results->fetchAll(PDO::FETCH_OBJ);
+            //Déconnexion de la base de données
+            unset($bdd); ?>
 
-        foreach ($produits as $p) {
-        ?>
-            <section id="paniercli">
+
+            <section class="grid">
                 <div>
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <h2>
-                        <?php echo $p->nom_produit ?>
-                    </h2>
-                </div>
-                <div>
-                    <p>
-                        <?php echo $p->details ?>
-                    </p>
-                </div>
+                    <?php
 
-                <div>
-                    <p>
-                        $ <?php echo $p->prix ?>
-                    </p>
-                </div>
+                    foreach ($produit as $p) {
+                    ?>
+                        <div id="paniercli">
+                            <b>
+                                <img src="" alt="">
+                            </b>
+                            <b>
+                                <h2>
+                                    <?php echo $p->nom_produit ?>
+                                </h2>
+                            </b>
+                            <b>
+                                <p id="owerflow_texte">
+                                    <?php echo $p->details ?>
+                                </p>
+                            </b>
 
-                <div>
-                    <p>
-                        <?php echo $p->total ?>
-                    </p>
-                </div>
+                            <b>
+                                <p>
+                                    $ <?php echo $p->prix ?>
+                                </p>
+                            </b>
+
+                            <b>
+                                <p>
+                                    <?php echo $p->total ?>
+                                </p>
+                            </b>
+                        </div>
+
+                    <?php
+                    }
+                    ?>
+                    <div>
+                        <h1>prize</h1>
+                    </div>
+                <?php
+            } else { ?>
+                    <section>
+                        <h1>Vous n'est pas connecter à un compte, <br> cela signifie que nous ne pouvons pas enregistre votre panier</h1>
+                        <a href="./Account.php">Connexion</a>
+                    </section>
+                <?php
+            } ?>
+
+
+
+
+
+
+
             </section>
-
-        <?php
-        }
-        ?>
-
-
-
-
-
-
-
-    </section>
-    <?php require 'footer.php' ?>
+            <?php require 'footer.php' ?>
 </body>
 
 </html>

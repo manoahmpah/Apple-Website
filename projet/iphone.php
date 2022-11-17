@@ -55,8 +55,11 @@ unset($bdd);
             <!-- <?php echo var_dump($produits) ?> -->
             <p>From $<?php echo $produits[4]->prix ?></p>
             <div class="link_iphone14pro_frontpage">
-                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                <form action="./panier.php" method="POST">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <input type="hidden" name="Iphone_14" value="<?php echo $produits[4]->Id_produit ?>">
+                    <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"><img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </form>
             </div>
 
 
@@ -75,8 +78,11 @@ unset($bdd);
                 <h2>Pro. Beyond.</h2>
                 <p>From $<?php echo $produits[4]->prix ?></p>
                 <div class="link_iphone14pro_frontpage">
-                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-                    <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <form action="./panier.php" method="POST">
+                        <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                        <input type="hidden" name="Iphone_14" value="<?php echo $produits[4]->Id_produit ?>">
+                        <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"><img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    </form>
                 </div>
             </div>
             <div>
@@ -91,8 +97,13 @@ unset($bdd);
             <h3>Love the power. <br> Love the price.</h3>
             <p>From $<?php echo $produits[5]->prix ?></p>
             <div class="link_iphone14pro_frontpage">
-                <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
-                <a href="">Buy <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+
+                <form action="./panier.php" method="POST">
+                    <a href="">Learn more <img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                    <input type="hidden" name="Iphone_SE" value="<?php echo $produits[5]->Id_produit ?>">
+                    <a href=""><input class="Bouton_buy" name="achat_AirPods3" type="submit" value="Buy"><img src="https://img.icons8.com/material-outlined/24/4169e1/forward.png" /></a>
+                </form>
+
             </div>
         </div>
         <div>

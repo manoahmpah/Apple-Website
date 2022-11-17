@@ -13,9 +13,9 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- css -->
-    <link rel="stylesheet" href="panier_panier.css">
+    <link rel="stylesheet" href="panier_panier(1).css">
 
-    <title>Document</title>
+    <title>Apple (France)</title>
 </head>
 
 <body>
@@ -44,55 +44,69 @@ session_start();
         //On transforme les résultats en un tableau associatif compréhensible par PHP
         $produit = $results->fetchAll(PDO::FETCH_OBJ);
         //Déconnexion de la base de données
-        unset($bdd);
+        unset($bdd); ?>
 
 
+        <section class="grid">
+            <div>
+                <?php
 
+                foreach ($produit as $p) {
+                ?>
+                    <div id="paniercli">
+                        <b>
+                            <img src="" alt="">
+                        </b>
+                        <b>
+                            <h2>
+                                <?php echo $p->nom_produit ?>
+                            </h2>
+                        </b>
+                        <b>
+                            <p id="owerflow_texte">
+                                <?php echo $p->details ?>
+                            </p>
+                        </b>
 
-        foreach ($produit as $p) {
-    ?>
-            <section id="paniercli">
+                        <b>
+                            <p>
+                                $ <?php echo $p->prix ?>
+                            </p>
+                        </b>
+
+                        <b>
+                            <p>
+                                <?php echo $p->total ?>
+                            </p>
+                        </b>
+                    </div>
+
+                <?php
+                }
+                ?>
                 <div>
-                    <img src="" alt="">
+                    <h1>prize</h1>
                 </div>
-                <div>
-                    <h2>
-                        <?php echo $p->nom_produit ?>
-                    </h2>
-                </div>
-                <div>
-                    <p id="owerflow_texte">
-                        <?php echo $p->details ?>
-                    </p>
-                </div>
+            <?php
+        } else { ?>
+                <section>
+                    <h1>Vous n'est pas connecter à un compte, <br> cela signifie que nous ne pouvons pas enregistre votre panier</h1>
+                    <a href="./Account.php">Connexion</a>
+                </section>
+            <?php
+        } ?>
 
-                <div>
-                    <p>
-                        $ <?php echo $p->prix ?>
-                    </p>
-                </div>
 
-                <div>
-                    <p>
-                        <?php echo $p->total ?>
-                    </p>
-                </div>
-            </section>
 
-        <?php
-        }
-        ?>
-    <?php
-    } else { ?>
-        <section>
-            <h1>Vous n'est pas connecter à un compte, <br> cela signifie que nous ne pouvons pas enregistre votre panier</h1>
-            <a href="./Account.php">Connexion</a>
+
         </section>
-    <?php } ?>
 
 
 
-    <?php require 'footer.php' ?>
+
+
+
+        <?php require 'footer.php' ?>
 </body>
 
 </html>
